@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "SkiaV3Blocked",
+    "slug": "skia-v3-ui-thread-blocked",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "bundleIdentifier": "com.kbrattli.skiav3uithreadblocked"
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "enableSceneSupport": true
+          }
+        }
+      ]
+    ]
+  }
+}
