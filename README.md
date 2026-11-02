@@ -4,6 +4,10 @@ On a fresh install, the first draw of a plain `<Canvas>` blocks the main thread 
 
 All of this is iOS.
 
+## Video
+
+[first-vs-second-open.mp4](docs/first-vs-second-open.mp4), at 0.125x. Left pair: the first open after a fresh install, on 2.14 and 3.9. They freeze, then jump to the finished page. Right pair: the same installs relaunched, which play through. It's my app on an iPhone 17 Pro simulator in a debug build, not this repo, with the page's window written per frame on the UI thread on all four (`CLIP_ON_UI_THREAD` below). The page is a different flat colour on the two sides only because of how my app picks a colour in that mode.
+
 ## What's in it
 
 - `App.tsx`: the card, plus a readout of the longest UI thread gap since the tap. It reads the gap in a `useFrameCallback`, which runs on the main thread on iOS.
